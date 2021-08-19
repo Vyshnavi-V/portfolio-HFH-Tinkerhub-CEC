@@ -56,7 +56,7 @@ tk.Label(root, text="To").place(x=10 , y=40)
 tk.Label(root, text="Amount").place(x=10 , y=80)
 
 tk.Label(root, text="Total:").place(x=10 , y=150)
-tk.Label(root, text="",font=('Ariel',14,) , fg='blue' , textvariable=nsalText).place(x=100 , y=150)
+tk.Label(root, text="",font=('Aerial',14,) , fg='blue' , textvariable=nsalText).place(x=100 , y=150)
 tk.Button(root, text="Cal", command=Ok ,height=1,width=3).place(x=100 ,y=110)
 
 e1=tk.Entry(root)
