@@ -1,0 +1,52 @@
+import tkinter as tk
+
+OptionList1=[
+"USD",
+]
+OptionList2=[
+"INR",
+
+]
+
+def Ok():
+
+    fr = variable.get()
+    to = variable1.get()
+
+    amount = float(e1.get())
+    if (fr == "USD" and to == "INR"):
+        total=amount*180 
+    else:
+        total=amount*120
+    nsalText.set(total)
+
+root=tk.Tk()
+root.geometry('300*200')
+root.title("Currency Converter")
+
+variable = tk.StringVar(root)
+variable.set(OptionList2[0])
+
+opt = tk.OptionMenu(root,variable1,*OptionList1)
+opt.config(width=10,font=('Aerial',14))
+opt.pack(side="top")
+
+variable1 = tk.StringVar(root)
+variable1.set(OptionList2[0])
+
+opt = tk.OptionMenu(root,variable1,*OptionList2)
+opt.config(width=10,font=('Aerial',14))
+opt.pack(side="top")
+
+variable1=tk.StringVar(root)
+variable1.set(OptionList2[0])
+
+opt=tk.OptionMenu(root,variable1,*OptionList2)
+opt.config(width=10,font=('Aerial',14))
+opt.pack(side="top")
+
+global e1
+global nsalText
+nsalText = tk.StringVar()
+labelText=tk.Label(text="",font=('Aerial',14),fg='blue')
+labelText.pack(side="top")
