@@ -15,7 +15,7 @@ def Ok():
 
     amount = float(e1.get())
     if (fr == "USD" and to == "INR"):
-        total=amount*180 
+        total=amount*180
     else:
         total=amount*120
     nsalText.set(total)
@@ -50,3 +50,16 @@ global nsalText
 nsalText = tk.StringVar()
 labelText=tk.Label(text="",font=('Aerial',14),fg='blue')
 labelText.pack(side="top")
+
+tk.Label(root, text="From").place(x=10 , y=10)
+tk.Label(root, text="To").place(x=10 , y=40)
+tk.Label(root, text="Amount").place(x=10 , y=80)
+
+tk.Label(root, text="Total:").place(x=10 , y=150)
+tk.Label(root, text="",font=('Ariel',14,) , fg='blue' , textvariable=nsalText).place(x=100 , y=150)
+tk.Button(root, text="Cal", command=Ok ,height=1,width=3).place(x=100 ,y=110)
+
+e1=tk.Entry(root)
+e1.place(x=80 , y=80)
+
+root.mainloop()
